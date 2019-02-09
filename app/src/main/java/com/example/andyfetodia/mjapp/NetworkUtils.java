@@ -1,7 +1,11 @@
 package com.example.andyfetodia.mjapp;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.ImageView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -156,31 +160,6 @@ public class NetworkUtils {
                 // Get a single earthquake at position i within the list of earthquakes
                 JSONObject currentSong = songArray.getJSONObject(i);
 
-/*                // For a given earthquake, extract the JSONObject associated with the
-                // key called "properties", which represents a list of all properties
-                // for that earthquake.
-                //JSONObject properties = currentEarthquake.getJSONObject("properties");
-
-                // Extract the value for the key called "mag"
-                double magnitude = properties.getDouble("mag");
-
-                // Extract the value for the key called "place"
-                String location = properties.getString("place");
-
-                // Extract the value for the key called "time"
-                long time = properties.getLong("time");
-
-                // Extract the value for the key called "url"
-                String url = properties.getString("url");
-
-                // Create a new {@link Earthquake} object with the magnitude, location, time,
-                // and url from the JSON response.
-                Earthquake earthquake = new Earthquake(magnitude, location, time, url);
-
-
-                // Add the new {@link Earthquake} to the list of earthquakes.
-                earthquakes.add(earthquake);*/
-
                 String artworkUrl100 = currentSong.getString("artworkUrl100");
                 String artistName = currentSong.getString("artistName");
                 String collectionName = currentSong.getString("collectionName");
@@ -201,4 +180,6 @@ public class NetworkUtils {
         // Return the list of earthquakes
         return songs;
     }
+
+
 }
