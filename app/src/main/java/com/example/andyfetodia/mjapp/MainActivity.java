@@ -16,22 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new AsyncTask<Void, Void, List<Song>>() {
-
-            @Override
-            protected void onPostExecute(List<Song> songs) {
-                for(int i =0; i< songs.size();i++){
-                    Log.e(LOG_TAG,songs.get(i).getTrackName());
-                }
-
-            }
-
-            @Override
-            protected List<Song>  doInBackground(Void... voids) {
-                List<Song> mjSong = NetworkUtils.fetchEarthquakeData(MJ_REQUEST_URL);
-                return mjSong;
-            }
-        }.execute();
 
     }
 

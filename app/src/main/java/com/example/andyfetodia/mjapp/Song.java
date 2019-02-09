@@ -15,6 +15,7 @@ public class Song {
         this.artistName = artistName;
         this.collectionName = collectionName;
         this.trackName = trackName;
+
     }
 
     public String getArtworkUrl100() {
@@ -32,4 +33,6 @@ public class Song {
     public String getTrackName() {
         return trackName;
     }
+
+
 }
