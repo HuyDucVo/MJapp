@@ -8,24 +8,26 @@ public class Song {
     private String trackName;
     private String trackPrice;
     private String trackTimeMillis;
+    private String trackViewUrl;
     public Song(){
 
     }
 
 
-    public Song(String artworkUrl100, String collectionName, String trackName, String trackPrice, String trackTimeMillis){
+    public Song(String artworkUrl100, String collectionName, String trackName, String trackPrice, String trackTimeMillis, String trackViewUrl){
         this.artworkUrl100 = artworkUrl100;
         this.collectionName = collectionName;
         this.trackName = trackName;
-        this.trackPrice = trackPrice;
-        this.trackTimeMillis = convertTime(trackTimeMillis);
+        this.trackPrice = "$ " + trackPrice;
+        this.trackTimeMillis = convertTime(trackTimeMillis) + " mins";
+        this.trackViewUrl = trackViewUrl;
     }
 
     private String convertTime(String trackTimeMillis) {
         int time = Integer.parseInt(trackTimeMillis);
         long minutes = TimeUnit.MILLISECONDS.toMinutes(time);
         long seconds = TimeUnit.MILLISECONDS.toSeconds(time);
-        return String.valueOf(minutes) + ":" + String.valueOf(seconds);
+        return String.valueOf(minutes) + ":" + String.valueOf(seconds/100);
     }
 
     public String getArtworkUrl100() {
@@ -48,4 +50,7 @@ public class Song {
         return trackTimeMillis;
     }
 
+    public String getTrackViewUrl() {
+        return trackViewUrl;
+    }
 }

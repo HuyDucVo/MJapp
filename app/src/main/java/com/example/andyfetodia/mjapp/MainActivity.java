@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity
                     intent.putExtra("collection_name",currentSong.getCollectionName());
                     intent.putExtra("price",currentSong.getTrackPrice());
                     intent.putExtra("playtime",currentSong.getTrackTimeMillis());
+                    intent.putExtra("artworkUrl100",currentSong.getArtworkUrl100());
+                    intent.putExtra("trackViewUrl",currentSong.getTrackViewUrl());
                     startActivity(intent);
                 }
             });
@@ -84,7 +86,6 @@ public class MainActivity extends AppCompatActivity
 
         if (data != null && !data.isEmpty()) {
             mAdapter.addAll(data);
-            //updateUi(data);
         }
     }
 

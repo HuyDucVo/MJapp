@@ -164,7 +164,8 @@ public class NetworkUtils {
                 //Song newSong = new Song(artworkUrl100,artistName,collectionName,trackName);
                 songs.add(new Song(currentSong.getString("artworkUrl100"),
                         currentSong.getString("collectionName"),currentSong.getString("trackName"),
-                        currentSong.getString("trackPrice"), currentSong.getString("trackTimeMillis")
+                        currentSong.getString("trackPrice"), currentSong.getString("trackTimeMillis"),
+                        currentSong.getString("trackViewUrl")
                         ));
 
             }
