@@ -42,4 +42,4 @@ Edge cases has been tested:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://g.recordit.co/UUDRC7cCL7.giff' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/UUDRC7cCL7.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
