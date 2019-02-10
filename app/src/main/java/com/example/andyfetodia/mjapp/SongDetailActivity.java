@@ -1,21 +1,20 @@
 package com.example.andyfetodia.mjapp;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.InputStream;
 
-
+/**
+ * This class will get the information from the Intent passed from the Main Activity then
+ * display all the detail of the song
+ */
 public class SongDetailActivity extends AppCompatActivity {
 
     @Override

@@ -8,6 +8,9 @@ import android.widget.ImageView;
 
 import java.io.InputStream;
 
+/**
+ * This class is used to download all the image as needed, update the image when downloaded completed
+ */
 public class DownloadImage extends AsyncTask<String, Bitmap, Bitmap> {
     ImageView bmImage;
 

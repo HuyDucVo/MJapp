@@ -32,10 +32,8 @@ public class NetworkUtils {
      * @return
      */
     public static List<Song> fetchEarthquakeData(String requestUrl) {
-        // Create URL object
         URL url = createUrl(requestUrl);
 
-        // Perform HTTP request to the URL and receive a JSON response back
         String jsonResponse = null;
         try {
             jsonResponse = makeHttpRequest(url);
@@ -43,10 +41,8 @@ public class NetworkUtils {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s
         List<Song> songs = extractFeatureFromJson(jsonResponse);
 
-        // Return the list of {@link Earthquake}s
         return songs;
     }
 
@@ -71,7 +67,6 @@ public class NetworkUtils {
     private static String makeHttpRequest(URL url) throws IOException {
         String jsonResponse = "";
 
-        // If the URL is null, then return early.
         if (url == null) {
             return jsonResponse;
         }
@@ -85,8 +80,6 @@ public class NetworkUtils {
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
-            // If the request was successful (response code 200),
-            // then read the input stream and parse the response.
             if (urlConnection.getResponseCode() == 200) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
@@ -100,9 +93,6 @@ public class NetworkUtils {
                 urlConnection.disconnect();
             }
             if (inputStream != null) {
-                // Closing the input stream could throw an IOException, which is why
-                // the makeHttpRequest(URL url) method signature specifies than an IOException
-                // could be thrown.
                 inputStream.close();
             }
         }
@@ -133,51 +123,30 @@ public class NetworkUtils {
      * @return
      */
     private static List<Song> extractFeatureFromJson(String songJSON) {
-        // If the JSON string is empty or null, then return early.
         if (TextUtils.isEmpty(songJSON)) {
             return null;
         }
 
-        // Create an empty ArrayList that we can start adding earthquakes to
         List<Song> songs = new ArrayList<>();
-
-        // Try to parse the JSON response string. If there's a problem with the way the JSON
-        // is formatted, a JSONException exception object will be thrown.
-        // Catch the exception so the app doesn't crash, and print the error message to the logs.
         try {
 
-            // Create a JSONObject from the JSON response string
             JSONObject baseJsonResponse = new JSONObject(songJSON);
-
-            // Extract the JSONArray associated with the key called "features",
-            // which represents a list of features (or earthquakes).
             int size = baseJsonResponse.getInt("resultCount");
             JSONArray songArray = baseJsonResponse.getJSONArray("results");
 
-            // For each earthquake in the earthquakeArray, create an {@link Earthquake} object
-            //for (int i = 0; i < earthquakeArray.length(); i++) {
             for (int i = 0; i < size; i++) {
-                // Get a single earthquake at position i within the list of earthquakes
+
                 JSONObject currentSong = songArray.getJSONObject(i);
-
-
-                //Song newSong = new Song(artworkUrl100,artistName,collectionName,trackName);
                 songs.add(new Song(currentSong.getString("artworkUrl100"),
                         currentSong.getString("collectionName"),currentSong.getString("trackName"),
                         currentSong.getString("trackPrice"), currentSong.getString("trackTimeMillis"),
                         currentSong.getString("trackViewUrl")
                         ));
-
             }
-
         } catch (JSONException e) {
-            // If an error is thrown when executing any of the above statements in the "try" block,
-            // catch the exception here, so the app doesn't crash. Print a log message
-            // with the message from the exception.
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+            Log.e(LOG_TAG, "Problem parsing the earthquake JSON results", e);
         }
 
-        // Return the list of earthquakes
         return songs;
     }
 

@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity
         mAdapter = new SongAdapter(this, new ArrayList<Song>());
         songListView.setAdapter(mAdapter);
 
+        //TODO Serializable or Parcelable for shorter code
         songListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
