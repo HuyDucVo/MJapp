@@ -160,13 +160,12 @@ public class NetworkUtils {
                 // Get a single earthquake at position i within the list of earthquakes
                 JSONObject currentSong = songArray.getJSONObject(i);
 
-                String artworkUrl100 = currentSong.getString("artworkUrl100");
-                String artistName = currentSong.getString("artistName");
-                String collectionName = currentSong.getString("collectionName");
-                String trackName = currentSong.getString("trackName");
 
-                Song newSong = new Song(artworkUrl100,artistName,collectionName,trackName);
-                songs.add(newSong);
+                //Song newSong = new Song(artworkUrl100,artistName,collectionName,trackName);
+                songs.add(new Song(currentSong.getString("artworkUrl100"),
+                        currentSong.getString("collectionName"),currentSong.getString("trackName"),
+                        currentSong.getString("trackPrice"), currentSong.getString("trackTimeMillis")
+                        ));
 
             }
 

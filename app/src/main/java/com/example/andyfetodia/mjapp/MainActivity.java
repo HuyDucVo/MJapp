@@ -2,6 +2,7 @@ package com.example.andyfetodia.mjapp;
 
 import android.app.LoaderManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -11,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -41,7 +43,18 @@ public class MainActivity extends AppCompatActivity
         mAdapter = new SongAdapter(this, new ArrayList<Song>());
         songListView.setAdapter(mAdapter);
 
-        //TODO: setOnItemClickListener
+        songListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                    Song currentSong = mAdapter.getItem(position);
+                    Intent intent  = new Intent(MainActivity.this,SongDetailActivity.class);
+                    intent.putExtra("song_name",currentSong.getTrackName());
+                    intent.putExtra("collection_name",currentSong.getCollectionName());
+                    intent.putExtra("price",currentSong.getTrackPrice());
+                    intent.putExtra("playtime",currentSong.getTrackTimeMillis());
+                    startActivity(intent);
+                }
+            });
 
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -54,7 +67,6 @@ public class MainActivity extends AppCompatActivity
             loadingIndicator.setVisibility(View.GONE);
             mEmptyStateTextView.setText(R.string.no_internet_connection);
         }
-
 
 
     }

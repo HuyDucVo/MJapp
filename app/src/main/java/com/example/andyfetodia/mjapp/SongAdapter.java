@@ -30,6 +30,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         super(context, 0, songs);
     }
 
+
     /**
      *
      * @param position

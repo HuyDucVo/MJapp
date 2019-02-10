@@ -1,36 +1,35 @@
 package com.example.andyfetodia.mjapp;
 
+import java.util.concurrent.TimeUnit;
+
 public class Song {
     private String artworkUrl100;
-    private String artistName;
     private String collectionName;
     private String trackName;
-
+    private String trackPrice;
+    private String trackTimeMillis;
     public Song(){
 
     }
 
-    /**
-     *
-     * @param artworkUrl100
-     * @param artistName
-     * @param collectionName
-     * @param trackName
-     */
-    public Song(String artworkUrl100,String artistName,String collectionName, String trackName){
+
+    public Song(String artworkUrl100, String collectionName, String trackName, String trackPrice, String trackTimeMillis){
         this.artworkUrl100 = artworkUrl100;
-        this.artistName = artistName;
         this.collectionName = collectionName;
         this.trackName = trackName;
+        this.trackPrice = trackPrice;
+        this.trackTimeMillis = convertTime(trackTimeMillis);
+    }
 
+    private String convertTime(String trackTimeMillis) {
+        int time = Integer.parseInt(trackTimeMillis);
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(time);
+        long seconds = TimeUnit.MILLISECONDS.toSeconds(time);
+        return String.valueOf(minutes) + ":" + String.valueOf(seconds);
     }
 
     public String getArtworkUrl100() {
         return artworkUrl100;
-    }
-
-    public String getArtistName() {
-        return artistName;
     }
 
     public String getCollectionName() {
@@ -41,5 +40,12 @@ public class Song {
         return trackName;
     }
 
+    public String getTrackPrice() {
+        return trackPrice;
+    }
+
+    public String getTrackTimeMillis() {
+        return trackTimeMillis;
+    }
 
 }
