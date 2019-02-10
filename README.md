@@ -34,8 +34,7 @@ Edge cases has been tested:
 
 ## Mock Up and Blueprint
 ![image](https://drive.google.com/uc?export=view&id=1o2Cqmhi7ueceQMM2M9dRpmQ3Nxo6K3bv)
-![image](https://drive.google.com/uc?export=view&id=bCVdVUFubu3GOPtse88uC1QtlDMTNZwo)
-![image](https://drive.google.com/uc?export=view&id=1sLXZO7c8p7UQPxIZrRt573VJOd7FpXNM)
+![image](https://drive.google.com/uc?export=view&id=1wRgBSHFLnTM_WGIE6WY7RAZt4JCoE4y_)
 ![image](https://drive.google.com/uc?export=view&id=1sLXZO7c8p7UQPxIZrRt573VJOd7FpXNM)
 
 ## Video Walkthrough
