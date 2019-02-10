@@ -11,6 +11,7 @@ The following **required** functionality & technology is completely implemented:
 
 - [x] ListView
 - [x] AsyncTask for each Image work asynchronously
+- [x] Loader
 - [x] Network
 - [x] JSON processing
 - [x] Constraint Layout
