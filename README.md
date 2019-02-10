@@ -2,7 +2,7 @@
 
 This is an Android that get the Michael Jacson songs from iTunes database then populate it on the app.  
 ## The Challenge 
-![image]https://drive.google.com/uc?export=view&id=1hYjq08_22io3jYNg9WtVNzxQ0yh-h_UX
+![image](https://drive.google.com/uc?export=view&id=1hYjq08_22io3jYNg9WtVNzxQ0yh-h_UX)
 Time spent: 12 hours spent in total
 
 ## User Stories
@@ -33,10 +33,10 @@ Edge cases has been tested:
 - [x] No Connectivity
 
 ## Mock Up and Blueprint
-![image]https://drive.google.com/uc?export=view&id=1o2Cqmhi7ueceQMM2M9dRpmQ3Nxo6K3bv
-![image]https://drive.google.com/uc?export=view&id=bCVdVUFubu3GOPtse88uC1QtlDMTNZwo
-![image]https://drive.google.com/uc?export=view&id=1wRgBSHFLnTM_WGIE6WY7RAZt4JCoE4y_
-![image]https://drive.google.com/uc?export=view&id=1sLXZO7c8p7UQPxIZrRt573VJOd7FpXNM
+![image](https://drive.google.com/uc?export=view&id=1o2Cqmhi7ueceQMM2M9dRpmQ3Nxo6K3bv)
+![image](https://drive.google.com/uc?export=view&id=bCVdVUFubu3GOPtse88uC1QtlDMTNZwo)
+![image](https://drive.google.com/uc?export=view&id=1wRgBSHFLnTM_WGIE6WY7RAZt4JCoE4y_)
+![image](https://drive.google.com/uc?export=view&id=1sLXZO7c8p7UQPxIZrRt573VJOd7FpXNM)
 
 ## Video Walkthrough
 
