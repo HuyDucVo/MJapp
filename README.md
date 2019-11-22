@@ -3,7 +3,6 @@
 This is an Android that get the Michael Jacson songs from iTunes database then populate it on the app.  
 ## The Challenge 
 ![image](https://drive.google.com/uc?export=view&id=1hYjq08_22io3jYNg9WtVNzxQ0yh-h_UX)
-Time spent: 12 hours spent in total
 
 ## User Stories
 
