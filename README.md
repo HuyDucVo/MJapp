@@ -1,4 +1,4 @@
-# MJapp - ePaisa- ideaTree Coding Challenge
+# MJapp Coding Challenge
 
 This is an Android that get the Michael Jacson songs from iTunes database then populate it on the app.  
 ## The Challenge 
