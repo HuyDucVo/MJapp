@@ -2,7 +2,8 @@
 
 This is an Android that get the Michael Jacson songs from iTunes database then populate it on the app.  
 ## The Challenge 
-![image](https://drive.google.com/uc?export=view&id=1hYjq08_22io3jYNg9WtVNzxQ0yh-h_UX)
+<img src="README_PIC/challenge.png" width="500px">  
+
 
 ## User Stories
 
@@ -33,10 +34,11 @@ Edge cases has been tested:
 - [x] No Connectivity
 
 ## Mock Up and Blueprint
-![image](https://drive.google.com/uc?export=view&id=1o2Cqmhi7ueceQMM2M9dRpmQ3Nxo6K3bv)
-![image](https://drive.google.com/uc?export=view&id=1wRgBSHFLnTM_WGIE6WY7RAZt4JCoE4y_)
-![image](https://drive.google.com/uc?export=view&id=1sLXZO7c8p7UQPxIZrRt573VJOd7FpXNM)
-![image](https://drive.google.com/uc?export=view&id=1bCVdVUFubu3GOPtse88uC1QtlDMTNZwo)
+<img src="README_PIC/mockup.png" width="500px">  
+<img src="README_PIC/list.png" width="500px">  
+<img src="README_PIC/cell.png" width="500px">  
+<img src="README_PIC/detail.png" width="500px">  
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
